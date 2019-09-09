@@ -4,6 +4,27 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function onTop(){
+  const first = 'Wazzzup';
+  
+  function takeTwo(){
+    const second = 'is ';
+    
+    function takeThree(){
+      const third = 'that ';
+      
+      function theBottom(){
+        const fourth = 'And ';
+        console.log(`${fourth} ${third} ${second} ${first}`);
+      }
+      theBottom();
+    }
+    takeThree();
+  }
+  takeTwo();
+}
+onTop();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
